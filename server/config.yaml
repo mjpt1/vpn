@@ -1,0 +1,41 @@
+# Iran VPN Gateway Server Configuration
+
+server:
+  host: "0.0.0.0"           # Bind address (0.0.0.0 = all interfaces)
+  port: 8443                # Control port (HTTPS-like)
+  max_clients: 100          # Maximum concurrent clients
+
+database:
+  path: "vpn_server.db"     # SQLite database file
+
+tls:
+  cert_file: "certs/server.crt"   # TLS certificate (optional, generates self-signed if missing)
+  key_file: "certs/server.key"    # TLS private key
+
+tunnel:
+  interface_name: "iran_vpn0"     # TUN interface name (Linux)
+  ip_range: "10.8.0.0/24"         # Virtual IP range
+  server_ip: "10.8.0.1"           # Server virtual IP
+  mtu: 1420                       # Maximum transmission unit
+
+security:
+  session_timeout_hours: 24       # Session expiry time
+  keepalive_interval: 15          # Keepalive ping interval (seconds)
+  max_sessions_per_user: 3        # Max concurrent sessions per user
+  encryption_algorithm: "ChaCha20-Poly1305"
+
+logging:
+  level: "INFO"                   # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "logs/server.log"         # Log file path (null = console only)
+  json_format: false              # Use JSON log format
+
+# DNS servers (Iran)
+dns:
+  primary: "10.202.10.202"        # Shatel DNS
+  secondary: "10.202.10.102"      # Shatel DNS backup
+
+# Advanced settings
+advanced:
+  cleanup_interval: 60            # Cleanup task interval (seconds)
+  stats_interval: 300             # Statistics log interval (seconds)
+  buffer_size: 4096               # Network buffer size (bytes)

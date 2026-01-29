@@ -1,0 +1,103 @@
+[2026-01-29 14:27:11] [    INFO] [vpn_server] Logging to file: logs/server.log
+[2026-01-29 14:27:11] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:27:11] [    INFO] [vpn_server] Iran VPN Gateway Server v1.0.0
+[2026-01-29 14:27:11] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:27:17] [    INFO] [vpn_server] Default admin user created (username: admin, password: admin123)
+[2026-01-29 14:27:17] [ WARNING] [vpn_server] SECURITY: Change default password immediately!
+[2026-01-29 14:27:17] [    INFO] [vpn_server] Default user creation complete, exiting
+[2026-01-29 14:27:53] [    INFO] [vpn_server] Logging to file: logs/server.log
+[2026-01-29 14:27:53] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:27:53] [    INFO] [vpn_server] Iran VPN Gateway Server v1.0.0
+[2026-01-29 14:27:53] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:27:53] [    INFO] [vpn_server] Configuration:
+[2026-01-29 14:27:53] [    INFO] [vpn_server]   Host: 0.0.0.0
+[2026-01-29 14:27:53] [    INFO] [vpn_server]   Port: 8443
+[2026-01-29 14:27:53] [    INFO] [vpn_server]   Database: vpn_server.db
+[2026-01-29 14:27:53] [    INFO] [vpn_server]   TLS Cert: certs/server.crt
+[2026-01-29 14:27:53] [    INFO] [vpn_server]   Max Clients: 100
+[2026-01-29 14:27:53] [   ERROR] [vpn_server] Fatal error: 
+Traceback (most recent call last):
+  File "C:\Users\mjpt1\Desktop\vpn\server\server_main.py", line 164, in main
+    asyncio.run(main_async(config))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\mjpt1\Desktop\vpn\server\server_main.py", line 85, in main_async
+    loop.add_signal_handler(sig, lambda s=sig: signal_handler(s))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\asyncio\events.py", line 629, in add_signal_handler
+    raise NotImplementedError
+NotImplementedError
+[2026-01-29 14:29:19] [    INFO] [vpn_server] Logging to file: logs/server.log
+[2026-01-29 14:29:19] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:29:19] [    INFO] [vpn_server] Iran VPN Gateway Server v1.0.0
+[2026-01-29 14:29:19] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:29:19] [    INFO] [vpn_server] Configuration:
+[2026-01-29 14:29:19] [    INFO] [vpn_server]   Host: 0.0.0.0
+[2026-01-29 14:29:19] [    INFO] [vpn_server]   Port: 8443
+[2026-01-29 14:29:19] [    INFO] [vpn_server]   Database: vpn_server.db
+[2026-01-29 14:29:19] [    INFO] [vpn_server]   TLS Cert: certs/server.crt
+[2026-01-29 14:29:19] [    INFO] [vpn_server]   Max Clients: 100
+[2026-01-29 14:29:19] [   ERROR] [vpn_server] Server error: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "C:\Users\mjpt1\Desktop\vpn\server\server_main.py", line 97, in main_async
+    await server.start()
+  File "C:\Users\mjpt1\Desktop\vpn\server\core\tunnel_server.py", line 108, in start
+    self.ssl_context = self._create_ssl_context()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mjpt1\Desktop\vpn\server\core\tunnel_server.py", line 92, in _create_ssl_context
+    context.load_cert_chain(self.cert_file, self.key_file)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+[2026-01-29 14:29:19] [    INFO] [vpn_server] Server shutdown complete
+[2026-01-29 14:30:55] [    INFO] [vpn_server] Logging to file: logs/server.log
+[2026-01-29 14:30:55] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:30:55] [    INFO] [vpn_server] Iran VPN Gateway Server v1.0.0
+[2026-01-29 14:30:55] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:30:55] [    INFO] [vpn_server] Configuration:
+[2026-01-29 14:30:55] [    INFO] [vpn_server]   Host: 0.0.0.0
+[2026-01-29 14:30:55] [    INFO] [vpn_server]   Port: 8443
+[2026-01-29 14:30:55] [    INFO] [vpn_server]   Database: vpn_server.db
+[2026-01-29 14:30:55] [    INFO] [vpn_server]   TLS Cert: None
+[2026-01-29 14:30:55] [    INFO] [vpn_server]   Max Clients: 100
+[2026-01-29 14:34:40] [    INFO] [vpn_server] Received signal 2, shutting down...
+[2026-01-29 14:34:41] [    INFO] [vpn_server] Server shutdown complete
+[2026-01-29 14:38:30] [    INFO] [vpn_server] Logging to file: logs/server.log
+[2026-01-29 14:38:30] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:38:30] [    INFO] [vpn_server] Iran VPN Gateway Server v1.0.0
+[2026-01-29 14:38:30] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:38:30] [    INFO] [vpn_server] Configuration:
+[2026-01-29 14:38:30] [    INFO] [vpn_server]   Host: 0.0.0.0
+[2026-01-29 14:38:30] [    INFO] [vpn_server]   Port: 8443
+[2026-01-29 14:38:30] [    INFO] [vpn_server]   Database: vpn_server.db
+[2026-01-29 14:38:30] [    INFO] [vpn_server]   TLS Cert: certs/server.crt
+[2026-01-29 14:38:30] [    INFO] [vpn_server]   Max Clients: 100
+[2026-01-29 14:38:30] [   ERROR] [vpn_server] Server error: ('No cipher can be selected.',)
+Traceback (most recent call last):
+  File "C:\Users\mjpt1\Desktop\vpn\server\server_main.py", line 97, in main_async
+    await server.start()
+  File "C:\Users\mjpt1\Desktop\vpn\server\core\tunnel_server.py", line 108, in start
+    self.ssl_context = self._create_ssl_context()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mjpt1\Desktop\vpn\server\core\tunnel_server.py", line 96, in _create_ssl_context
+    context.set_ciphers('TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384')
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLError: ('No cipher can be selected.',)
+[2026-01-29 14:38:30] [    INFO] [vpn_server] Server shutdown complete
+[2026-01-29 14:39:43] [    INFO] [vpn_server] Logging to file: logs/server.log
+[2026-01-29 14:39:43] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:39:43] [    INFO] [vpn_server] Iran VPN Gateway Server v1.0.0
+[2026-01-29 14:39:43] [    INFO] [vpn_server] ============================================================
+[2026-01-29 14:39:43] [    INFO] [vpn_server] Configuration:
+[2026-01-29 14:39:43] [    INFO] [vpn_server]   Host: 0.0.0.0
+[2026-01-29 14:39:43] [    INFO] [vpn_server]   Port: 8443
+[2026-01-29 14:39:43] [    INFO] [vpn_server]   Database: vpn_server.db
+[2026-01-29 14:39:43] [    INFO] [vpn_server]   TLS Cert: certs/server.crt
+[2026-01-29 14:39:43] [    INFO] [vpn_server]   Max Clients: 100

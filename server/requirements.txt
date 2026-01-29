@@ -1,0 +1,29 @@
+# ============================================================
+# Iran VPN Gateway Server - Dependencies
+# ============================================================
+
+# Core Dependencies
+# ============================================================
+pycryptodome==3.20.0           # ChaCha20-Poly1305 encryption
+PyYAML==6.0.1                  # Configuration file parsing
+msgpack==1.0.8                 # Binary message serialization
+
+# Database
+# ============================================================
+SQLAlchemy==2.0.29             # ORM
+argon2-cffi==23.1.0            # Password hashing
+
+# Logging
+# ============================================================
+python-json-logger==2.0.7      # JSON log formatting
+
+# Utilities
+# ============================================================
+python-dateutil==2.9.0         # Date/time utilities
+
+# Development & Testing (optional)
+# ============================================================
+pytest==8.1.1                  # Testing framework
+pytest-asyncio==0.23.6         # Async test support
+black==24.3.0                  # Code formatter
+flake8==7.0.0                  # Linter
