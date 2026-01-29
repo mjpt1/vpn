@@ -451,4 +451,5 @@ python build.py --onefile
 
 **Last Updated**: January 15, 2024  
 **Version**: 1.0.0  
-**Author**: Development Team
+**Author**: Mohsen Jabbarehasl
+
