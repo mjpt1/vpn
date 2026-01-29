@@ -1,0 +1,29 @@
+# VPN Client Configuration
+
+server:
+  host: ""              # VPN server IP or hostname (REQUIRED)
+  port: 8443                  # VPN server port
+  verify_cert: false          # Verify TLS certificate (false for self-signed)
+  cert_file: null             # Path to CA certificate file (optional)
+
+auth:
+  username: ""                # Your username (REQUIRED)
+  password: ""                # Your password (REQUIRED)
+
+network:
+  interface_name: "VPN-TAP"   # TAP interface name
+  mtu: 1400                   # MTU size
+  dns_servers:                # DNS servers to use when connected
+    - "8.8.8.8"               # Google DNS
+    - "8.8.4.4"
+
+vpn:
+  auto_reconnect: true        # Automatically reconnect on disconnect
+  kill_switch: true           # Block all traffic if VPN disconnects
+  allow_lan: true             # Allow LAN access when kill switch enabled
+  reconnect_max_backoff: 30   # Max reconnect backoff (seconds)
+
+logging:
+  level: "INFO"               # Log level: DEBUG, INFO, WARNING, ERROR
+  file: "vpn_client.log"      # Log file path
+  console: true               # Log to console

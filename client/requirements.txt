@@ -1,0 +1,25 @@
+# VPN Client Dependencies
+# Python 3.11+ (compatible with Python 3.14)
+
+# Cryptography
+pycryptodome>=3.19.0         # ChaCha20-Poly1305 encryption
+
+# Networking
+msgpack>=1.0.7               # Binary serialization
+
+# Configuration
+PyYAML>=6.0                  # YAML config files
+
+# GUI (PySide6)
+PySide6>=6.10.0              # Qt6 for Python (GUI framework)
+
+# Database
+SQLAlchemy>=2.0              # ORM for database
+
+# Utilities
+pyaes>=1.6.1                 # AES encryption utility
+argon2-cffi>=23.1.0          # Password hashing
+
+# Development (optional)
+pytest>=7.0                  # Testing framework
+pytest-asyncio>=0.21.0       # Async testing
